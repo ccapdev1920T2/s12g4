@@ -1,6 +1,6 @@
-# 18EROARY/controllers
+# ccapdev1920T2/s12g4/controllers
 
 This folder contains files which defines callback functions for client requests.
 
 ### Contents:
-- [controller.js](github link) - contains necessary callback functions to be called for a given client request related to [`index.hbs`](index.hbs github link).
+- [controller.js](https://github.com/ccapdev1920T2/s12g4/blob/master/controllers/controller.js) - contains necessary callback functions to be called for a given client request 

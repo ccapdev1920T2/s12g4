@@ -1,115 +1,29 @@
-# ITINERARY MAKER AND TRAVEL TRACKER
-CCAPDEV1920T2 S12 GROUP 4
+# ccapdev1920T2/s12g4/views
 
-This repository contains all source codes to navigate through the whole web application. 
-The web application is an itinerary maker in which the user can search for activities and others' itineraries for reference. This application also has a feature as that of a diary in which the user can compile memories of the travels he/she want to compile.
+This folder contains all hbs files to be rendered when requested from the server.
 
-## Contents:
-
-- [controllers](link) - This folder contains files which defines callback functions for client requests.
-- [models](link) - This folder contains files for database modeling and access.
-- [public](link) - This folder contains static assets such as css, js, and image files.
-- [routes](link) - This folder contains files which describes the response of the server for each HTTP method request to a specific path in the server.
-- [views](link) - This folder contains all hbs files to be rendered when requested from the server.
-- [add_data.js](link) - This file adds dummy data in the database.
-- [delete_data.js](link) - This file drops all collections in the database.
-- [index.js](link) - The main entry point of the web application.
-
-## Setting-Up:
-
-1. Clone the repository either by downloading the contents of the repository [here](link), or using the command below (Note: git should be installed in your system for this to work).
-```
-git clone https://github.com/link
-```
-2. Open Command Prompt
-3. Navigate to the project folder - the folder containing the contents of the cloned or downloaded repository.
-4. Run the command `npm install` to initialize and install all necessary modules used in the project.
-
-5. We may now run our server. To do this, we run the command `node index.js`. Upon running the command, your Command Prompt should display the following statement:
-```
-app listening at port 3000
-{insert dummy data}
-```
-6. Let's test our web application. Go to the link below to access the web application:
-```
-http://localhost:3000/
-```
-	Your web browser should display the screen below:
-	([alt text](photo))
-
-	In this page, you can either login (as an existing user) or register (as a new user) to be able to navigate through the features.
-
-## Navigating Features:
-
-1. Register (Optional) - by clicking the 'Register' button, you will be redirected to the registration page and you can register as a user by filling up the registration form and clicking the 'Register' button afterwards. This will then create a new user account that has the inputted details in the registration and you will be redirected to a screen saying 'You have successfully created your account'. Then, click on 'Back to Home Page' to proceed to the login.
-
-2. Login - by clicking the 'Login' button, you will be redirected to the sign in page wherein Username and Password is needed. If you registered as a new user, you may use your registered username and password to login. Otherwise, you may opt to choose from the existing user login details from the dummy data:
-
-| Username          | Password           |
-|-------------------|--------------------|
-| Tricia            | gandaTricia        |
-| Mao               | gandaMao           |
-| Rhon              | machoRhon          |
-| Vhino             | machoButGanda      |
-| Justine           | silentButDeadly    |
-| RealJed           | notJedwig          |
-| +_xXTalaXx_+      | tamaBaTo           |
-|-------------------|--------------------|
-
-3. Dashboard - in the dashboard, all itineraries of existing users are displayed which are clickable for viewing and download sorted by latest date. In this page, all features are now navigable from the navigation bar, search bar, and clickable itineraries.
-
-4. Itinerary Creator - by clicking on 'Itinerary Creator' on the navigation bar, you will be redirected to the itinerary creation page and you can create your own itinerary by filling up the itinerary form. The left form shows the itinerary details form. An auto-generated id can be seen but cannot be modified by the user, this is just for user-reference purposes. In this part, itinerary name, start date, end date, and location shall be filled up.
-
-	--ADDING ACTIVITIES--
-	In creating an itinerary, activites can be created by filling up the right side of the form below the 'Add Activities Here' text. 
-	1. Activity name is required while all other information are optional. 
-	2. To add contact details of the activity, click on 'Add Contact Details' button and fill up the corresponding form. 
-	3. To add transportation details of the activity, click on 'Add Transportation Details' button and fill up the corresponding for. 
-	4. To add the activity created in the itinerary, click on 'Add Activity' button and see that the activity will be appended to the lower part of the page. 
-	5. Repeat these steps until all activities you want are added in the itinerary.
-
-After adding all activities and its details on the itinerary, click on the 'Save Itinerary' button to save the itinerary created on the database and you will be redirected to a page where you can see all your account's past and current itineraries (Refer to My Itineraries feature). Otherwise, click on 'Back to Dashboard' button to cancel the itinerary creation which will redirect you back to the dashboard without saving the itinerary.
-
-5. My Itineraries - by clicking on 'My Itineraries' on the navigation bar, you will be redirected to a page where you can see all your created itineraries and wherein you can create a new itinerary or view, edit, delete, and download a specific itinerary by clicking on its corresponding buttons in the page. 
-
-	--CREATE NEW ITINERARY--
-	by clicking on the 'Create New Itinerary Button', it will redirect you to the itinerary creator page.
-
-	--VIEW--
-	by clicking on the corresponding 'View' button of the itinerary you wish to view, you will be redirected to a page wherein you can view the details of the itinerary and activites you chose to view. To download the itinerary, click on the 'Download' button. To go back to your itineraries, click on 'Back to Itineraries' button.
-
-	--EDIT--
-	by clicking on the corresponding 'Edit' button of the itinerary you wish to edit, you will be redirected to a page wherein you can edit the itinerary details and each activity's details. Update the itinerary information (upper form) by filling up the form to modify it. If you intend to edit some activities as well, do not click on 'Save Itinerary' yet. 
-	Updating and deleting of each activity is done individually:
-	1. Fill up with new or modified information the row of activity that u want to edit then click on its corresponding 'update' button.
-	2. Click on the corresponding 'delete' button of the activity row you wish to delete.
-	2. Click on 'Save Itinerary' button to save the changes to your activities and itinerary.
-
-	--DELETE--
-	by clicking on the corresponding 'Delete' button of the itinerary you wish to delete, the itinerary together with its corresponding activities will be deleted and will not be anymore accessible in the 'My Itineraries' page.
-
-	--DOWNLOAD--
-	by clicking on the corresponding 'Download' button of the itinerary you wish to download, the itinerary together with its corresponding activities will be downloaded such as in 'view' format.
-
-6. Search Itineraries - by typing into the 'Search for Itineraries' search bar a keyword such as itinerary location or itinerary name, you will be redirected to a page showing the itinerary results which are available for viewing and download by clicking on the 'view' or 'download' button corresponding to it.
-
-7. My Past Travels - by clicking on your username in the navigation bar, click on 'My Past Travels' from the dropdown options. This will redirect you to a page where you can see all your created memories and wherein you can create a new memory, search for memories by typing into the search bar beside the 'New Memory' button a keyword such as dates and titles, or edit and delete a specific memory by clicking on its corresponding buttons in the page.
-
-	--NEW MEMORY--
-	by clicking on the 'New Memory', you will be redirected to the memory creation page and you can create a memory by filling up the form and optionally add pictures.
-
-		--ADDING PICTURES--
-		1. Click on the 'Choose Files' button.
-		2. Choose picture that you want to upload.
-		3. Picture will be added to your 'Photo Album'
-
-	--EDIT--
-	by clicking on the corresponding 'Edit' button of the memory you wish to edit, you will be redirected to a page wherein you can edit the memory details.
-	1. Fill up with new or modified information the fields that you wish to edit.
-	2. Reupload past photos and upload new photos you wish to add.
-	3. Click on 'Save Memory' to save the changes in the edited memory.
-
-	--DELETE--
-	by clicking on the corresponding 'Delete' button of the memory you wish to delete, the memory together with its corresponding photos will be deleted and will not be anymore accessible in the 'My Travels' page.
-
-8. Logout - by clicking on your username in the navigation bar, click on 'Logout' from the dropdown options. This will log you out of your account and redirected to a screen saying 'You have successfully logged out'. Click on the 'Back to Home' button to proceed to the Login/Register pag again.
+### Contents:
+- [layouts](https://github.com/ccapdev1920T2/s12g4/tree/master/views/layouts) - This folder contains the layout hbs code used by other hbs files for a constant design.
+- [partials](https://github.com/ccapdev1920T2/s12g4/tree/master/views/partials) - This folder contains partial hbs code used by other hbs files.
+- [about_us.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/about_us.hbs) - About us page displayed at the root of the application
+- [dashboard.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/dashboard.hbs) - Dashboard page displayed when the user successfully logs in. This displays all the itineraries and their corresponding reviews and comments.
+- [details.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/details.hbs) - Page which displays an itinerary and its details
+- [download_it.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/download_it.hbs) - Displayed when a user downloads an itinerary
+- [editReview.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/editReview.hbs) - Page which contains a form displaying the review details to be edited
+- [error.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/error.hbs) - Page displayed when there is an error in accessing other routes
+- [home.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/home.hbs) - Homepage which displays the login and register buttons
+- [it_create.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/it_create.hbs) - Page which displays a form asking for the details of a new itinerary to be created and its corresponding activities.
+- [it_edit.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/it_edit.hbs) - Page which contains a form displaying the itinerary details to be edited. Within this form, you may update an itinerary, and update and delete an activity.
+- [it_view.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/it_view.hbs) - Page which displays the itinerary chosen, its activities, and all of their details.
+- [itineraries.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/itineraries.hbs) - Page which displays all the user's itineraries. You may view, edit, delete, and download an itinerary in this page.
+- [login.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/login.hbs) - Log-in page which displays a form asking for the user's username and password.
+- [logout.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/logout.hbs) - This page displays a text that says a user has successfully logged out of his account. It also includes a button that redirects to the home page.
+- [mem_edit.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/mem_edit.hbs) - This page displays the the chosen memory and its details in a form. Within this form, you may update the memory's details.
+- [memorySearch.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/memorySearch.hbs) - This page displays the results of the memory you searched for if it exists.
+- [newmemory.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/newmemory.hbs) - This page displays a form asking for the details of a new memory to be created.
+- [registration.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/registration.hbs) - This page displays a form asking for the user's details such as first name, last name, 
+- [review.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/review.hbs) - Page which displays a form asking for the review details to be created
+- [search.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/search.hbs) - This page displays the results of the itinerary you searched for if it exists.
+- [success.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/success.hbs) - This page is displayed when a user successfully creates an account. This contains a text and a button which redirects the user back to the root of the application.
+- [tracker.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/tracker.hbs) - This page displays all the user's memories and their details.
+- [viewReview.hbs](https://github.com/ccapdev1920T2/s12g4/blob/master/views/viewReview.hbs) - Page which displays the details of the review

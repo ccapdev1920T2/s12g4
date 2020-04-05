@@ -6,14 +6,14 @@ The web application is an itinerary maker in which the user can search for activ
 
 ## Contents:
 
-- [controllers](link) - This folder contains files which defines callback functions for client requests.
-- [models](link) - This folder contains files for database modeling and access.
-- [public](link) - This folder contains static assets such as css, js, and image files.
-- [routes](link) - This folder contains files which describes the response of the server for each HTTP method request to a specific path in the server.
-- [views](link) - This folder contains all hbs files to be rendered when requested from the server.
-- [add_data.js](link) - This file adds dummy data in the database.
-- [delete_data.js](link) - This file drops all collections in the database.
-- [index.js](link) - The main entry point of the web application.
+- [controllers](https://github.com/ccapdev1920T2/s12g4/tree/master/controllers) - This folder contains files which defines callback functions for client requests.
+- [models](https://github.com/ccapdev1920T2/s12g4/tree/master/models) - This folder contains files for database modeling and access.
+- [public](https://github.com/ccapdev1920T2/s12g4/tree/master/public) - This folder contains static assets such as css, js, and image files.
+- [routes](https://github.com/ccapdev1920T2/s12g4/tree/master/routes) - This folder contains files which describes the response of the server for each HTTP method request to a specific path in the server.
+- [views](https://github.com/ccapdev1920T2/s12g4/tree/master/views) - This folder contains all hbs files to be rendered when requested from the server.
+- [add_data.js](https://github.com/ccapdev1920T2/s12g4/blob/master/add_data.js) - This file adds dummy data in the database.
+- [delete_data.js](https://github.com/ccapdev1920T2/s12g4/blob/master/delete_data.js) - This file drops all collections in the database.
+- [index.js](https://github.com/ccapdev1920T2/s12g4/blob/master/index.js) - The main entry point of the web application.
 
 ## Setting-Up:
 
