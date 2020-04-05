@@ -1,0 +1,70 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/Parasailing.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 no-padding">
+            <h2>Edit Itinerary</h2>
+        </div>
+        <form method="POST" name="itform" id="itform">
+            <button type="submit"  form="itform" name="saveIt" id="saveIt" class="btn btn-success editsave">Save Itinerary</button>
+                <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3><mark><input type="text" id="it_name" name="itname" value="{{it_name}}"></mark></h3>
+                                <h3><mark><input type="text" id="edit_id" name="editid" value="{{it_id}}" readonly></mark></h3>
+                                <h4><input type="date" id="it_sdate" name="itsdate" value="{{memoryDateFormat it_sdate}}"> - 
+                                <input type="date" id="it_edate" name="itedate" value="{{memoryDateFormat it_edate}}"></h4>
+                                <h4><input type="text" id="it_location" name="itlocation" value="{{it_location}}"></h4>
+                            </div>
+                        
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                     <tr>
+                                        <th>Activity Name</th>
+                                        <th>Date</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Estimated Cost</th>
+                                        <th>Address</th>
+                                        <th>Contact Person</th>
+                                        <th>Contact Number</th>
+                                        <th>Contact Email</th>
+                                        <th>Mode of Transportation</th>
+                                    </tr>
+                                </thead>
+                                <form id="actform" name="actform" method="POST">
+                                    <tbody>
+                                        {{#each activity}}
+                                            <!--If handlebars for those fields that are not required-->
+                                            <tr>
+                                                <td class="col-lg-2 no-padding" ><input type="text" id="act_name" name="actname" value="{{name}}" readonly></td><!--required-->
+                                                <td><input type="date" id="act_date" value="{{memoryDateFormat date}}"></td><!--required-->
+                                                <td><input type="text" id="act_stime" name="actstime "value="{{stime}}"></td>
+                                                <td><input type="text" id="act_etime" name="actetime" value="{{etime}}"></td>
+                                                <td><input type="text" id="act_cost" name="actcost" value="{{cost}}"></td>
+                                                <td><input type="text" id="act_address" name="actaddress" value="{{address}}"></td>
+                                                <td><input type="text" id="act_cname" name="actcname" value="{{cname}}"></td>
+                                                <td><input type="text" id="act_cnum" name="actcnum" value="{{cnum}}"></td>
+                                                <td><input type="email" id="act_cmail" name="actcmail" value="{{cmail}}"></td>
+                                                <td><input type="text" id="act_trans" name="acttrans" value="{{transpo}}"></td>
+                                                <td>
+                                                    <input type="submit" class=" btn btn-warning editAct"  form="actform" name="saveAct" id="saveAct" value="Update">
+                                                    <input type="submit" class=" btn btn-danger delAct"  form="actform" name="deleteAct" id="deleteAct" value="Delete">
+                                                </td>
+                                        {{/each}}
+                                    </tbody>
+                                </form>
+                            </table>
+                        </div>
+        </form>
+        </div>
+        </div>
+    </div>
+</div>

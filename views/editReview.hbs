@@ -1,0 +1,46 @@
+{{>navbar}}
+ <style>
+    body{
+        background-image: url('img/aerialwalk.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 style="color: black;">Edit Review for {{it_name}}</h2>
+        </div>
+        <form method="POST">
+        <div class="col-lg-2">
+            <h2><button type="submit" id="review" class="btn btn-success btn-block">Save Review</button></h2>
+        </div>
+        <div class="col-lg-2">
+            <h2><a href="/itineraries" class="btn btn-success btn-block" role="button" >Back to Itineraries</a></h2>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label for="stars">Star Rating:</label>
+                        <select id="stars" name="stars" required>
+                            {{#if_eq stars 1}}<option value="1.0" selected>1.0</option>{{else}}<option value="1.0">1.0</option>{{/if_eq}}
+                            {{#if_eq stars 1.5}}<option value="1.5" selected>1.5</option>{{else}}<option value="1.5">1.5</option>{{/if_eq}}
+                            {{#if_eq stars 2}}<option value="2.0" selected>2.0</option>{{else}}<option value="2.0">2.0</option>{{/if_eq}}
+                            {{#if_eq stars 2.5}}<option value="2.5" selected>2.5</option>{{else}}<option value="2.5">2.5</option>{{/if_eq}}
+                           {{#if_eq stars 3}}<option value="3.0" selected>3.0</option>{{else}}{{/if_eq}}
+                            {{#if_eq stars 3.5}}<option value="3.5" selected>3.5</option>{{else}}<option value="3.5">3.5</option>{{/if_eq}}
+                            {{#if_eq stars 4}}<option value="4.0" selected>4.0</option>{{else}}<option value="4.0">4.0</option>{{/if_eq}}
+                            {{#if_eq stars 4.5}}<option value="4.5" selected>4.5</option>{{else}}<option value="4.5">4.5</option>{{/if_eq}}
+                            {{#if_eq stars 5}}<option value="5.0" selected>5.0</option>{{else}}<option value="5.0">5.0</option>{{/if_eq}}
+                        </select>
+                    </div>
+                    <div class="panel-body">
+                        <textarea class="form-control" rows="5" id="content" placeholder="Write a review for this itinerary" name="content" required>{{content}}</textarea>
+                        <input type="text" id="revIt_id" name="it_id" value="{{it_id}}" hidden>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

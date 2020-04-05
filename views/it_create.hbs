@@ -1,0 +1,139 @@
+{{> navbar}}
+<style>
+    body{
+        background-image: url('img/bananaboat.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>CREATE YOUR ITINERARY</h2>
+            <p> Fill out the information below and save itinerary when done.</p>
+            <form method='POST' id='itForm' name='itForm'>
+                <button type="submit" id="create_it" name="create_it" class="btn btn-success" >SAVE ITINERARY</button>
+            <a href="dashboard" class="btn btn-success" role="button">BACK TO DASHBOARD</a>
+            <table>
+                <tr>
+                    <td>
+                        <div id="initialize"> 
+                                <p>&nbsp;</p>  
+                                <label for="it_id"><span class="required">*</span>ITINERARY ID:</label><br>
+                                <input type="text" id="it_id" name="it_id" value="" readonly><br>
+                                <p id="idval"></p>
+                                <label for="it_name"><span class="required">*</span>ITINERARY NAME:</label><br>
+                                <input type="text" id="it_name" name="it_name" required><br>
+
+                                <label for="it_start"><span class="required">*</span>START DATE:</label><br>
+                                <input type="date" id="it_start" name="it_start" required><br>
+
+                                <label for="it_end"><span class="required">*</span>END DATE:</label><br>
+                                <input type="date" id="it_end" name="it_end" required><br>
+
+                                <label for="it_loc"><span class="required">*</span>LOCATION:</label><br>
+                                <input type="text" id="it_loc" name="it_loc" required><br> <br>
+                                <p id='it_error1' style="color: red;">&nbsp;</p>
+                                <p id='it_error2' style="color: red;">&nbsp;</p>  
+                        </div>
+                    </td>
+                    </form>
+                    <td>
+                        <h2 class="container-fluid" align="center">Add Activities Here</h2>
+                        <div id="all_act" class="container-fluid font_style fixed">
+                            <div id="each_act">
+                                <form method='POST' id='actForm' name='actForm'>
+                                    <input type="text" id="act_id" name="act_id" hidden>
+                                    <table id="morefield">
+                                        <tr>
+                                            <td colspan="4" style="border-bottom: 2px solid #aaa"><strong>Activity Information</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="act_name"><span class="required">*</span>Activity Name:</label></td>
+                                            <td><input type="text" id="act_name" name="act_name" placeholder="Required" required></td>
+
+                                            <td><label for="act_date"><span class="required">*</span>Date of Activity:</label></td>
+                                            <td><input type="date" id="act_date" name="act_date" required></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><label for="act_stime">Start Time:</label></td>
+                                            <td><input type="time" id="act_stime" name="act_stime"></td>
+
+                                            <td><label for="act_stime">End Time:</label></td>
+                                            <td><input type="time" id="act_etime" name="act_etime"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="act_cost">Expected Cost:</label></td>
+                                            <td><input type="number" id="act_cost" name="act_cost"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" style="border-bottom: 2px solid #aaa"><strong>Exact Location</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="act_street">Street:</label></td>
+                                            <td><input type="text" id="act_street" name="act_street"></td>
+
+                                            <td><label for="act_city">City:</label></td>
+                                            <td><input type="text" id="act_city" name="act_city"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="act_zip">Zip Code:</label></td>
+                                            <td><input type="number" id="act_zip" name="act_zip"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <center style="background-color: #eee;"><button id="addcontact" class="btn btn-success">ADD CONTACT DETAILS</button></center>
+                                            </td>
+                                            <td colspan="2">
+                                                <center style="background-color: #eee;"><button id="addtranspo" class="btn btn-success">ADD TRANSPORTATION DETAILS</button></center>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4"><p id="error"></p></td>
+                                        </tr>
+                                    </table>
+                                </form>
+                                <center style="background-color: #eee;"><button name="addAct" id="add" type="submit" class="btn btn-success" form="actForm">ADD ACTIVITY</button></center>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+
+            <div>
+                <table>
+                    <tr>
+                        <td><h2 id="header">Your Activities</h2></td>
+                        <td><h4 align="center">Total Expense/s: <span id="total">0.00</span></h4></td>
+                    </tr>
+                </table>
+            </div>
+
+            <table id="actTable">
+                <thead>
+                    <tr>
+                        <th>ACTIVITY NAME</th>
+                        <th>DATE</th>
+                        <th>START TIME</th>
+                        <th>END TIME</th>
+                        <th>STREET</th>
+                        <th>CITY</th>
+                        <th>ZIPCODE</th>
+                        <th>CONTACT NAME</th>
+                        <th>CONTACT NUM</th>
+                        <th>CONTACT EMAIL</th>
+                        <th>TRANSPORTATION</th>
+                        <th>EXPENSE/S</th>
+                    </tr>
+               </thead>
+                <tbody id="appendhere">
+                </tbody>
+             </table>
+        </div>
+    </div>
+    

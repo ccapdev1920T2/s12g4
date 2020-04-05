@@ -1,0 +1,32 @@
+{{> header}}
+<style>
+    body{
+        background-image: url('img/windmill1.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="login-container">
+    <img src="img/egg.png" class="display-pic">
+    <header>
+        <h1 class="center-block text-center"><b>{{title}}</b></h1>
+    </header>
+    <form method="POST" autocomplete="off">
+        <p>Username</p>
+        <input type="text" id="username" placeholder="Enter username" required="true" name="username">
+        <br>
+        <br>
+        <p>Password</p>
+        <input type="password" id="pw" placeholder="Enter password" required="true" name="password">
+        <br>
+        <center><p style="color: rgb(255, 94, 0);">&nbsp;{{message}}&nbsp;</p></center>
+        <br>
+        <div class="col-md-12 text-center">
+            <button type="submit" onclick="checkInputs()" class="btn btn-success center-block text-center" role="button" style="width: 150px;">Login</button>
+            <br>
+            <a href="registration">Don't have an account?</a>
+        </div>
+
+    </form>
+</div>

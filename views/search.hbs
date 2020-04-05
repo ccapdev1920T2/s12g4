@@ -1,0 +1,63 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/river.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="col-lg-8">
+        <h2 style="color:Black">{{title}}</h2>
+        <br>
+        <br>
+    </div>
+    {{#each itinerary}}
+            <div class="col-lg-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><span class="pull-right"><a href="/details" class="seeDetails">See details</a></span>
+                                <h3 class='title'><mark>{{this.it_name}}</mark></h3>
+                                <h4 class='id' ><mark>{{this.it_id}}</mark></h4>
+                                <h4 class='date'>{{dateFormat this.it_sdate}} - {{dateFormat this.it_edate}}</h4><span class="pull-right"><a href="/download_it" class="dashboardDownload" download="">Download</a></span>
+                                <h4 class='loc'>{{this.it_location}}</h4>
+                            </div>
+                        </div>
+            </div>
+            {{#each ../review}}
+            {{#if_eq this.it_id ../this.it_id}}
+            <div class="col-lg-4">
+                <div class="panel panel-danger fixed-panel">
+                    <div class="panel-footer">Review{{#if_eq this.acct_email ../../email}}<span class="pull-right">Write/Edit Review</span>{{/if_eq}}</div>
+                    <div class="panel-heading">
+                                {{this.stars}} Stars by {{this.name}}
+                                <span class="glyphicon glyphicon-comment pull-right commentNum" title="Write a comment"> {{../../comment.length}}</span>
+                                <span class="glyphicon glyphicon-thumbs-down pull-right" title="Dislike">{{#if ../../comment.length}} {{this.dislikes}}{{else}} 0{{/if}}&nbsp;</span>
+                                <span class="glyphicon glyphicon-thumbs-up pull-right" title="Like">{{#if ../../comment.length}} {{this.likes}}{{else}} 0{{/if}}&nbsp;</span>
+                                <br> {{dateFormat this.date}} {{this.time}}
+                    </div>
+                    <div class="panel-body comment">
+                        <p>{{this.content}}</p>
+                        {{#each ../../comment}}
+                        {{#if_eq this.it_id ../../this.it_id}}
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    {{this.writer}} wrote on <span class="pull-right edited"></span>
+                                    <br> {{dateFormat this.date}} {{this.time}}:
+                                    <span class="glyphicon glyphicon-thumbs-down pull-right" title="Dislike"> {{this.dislikes}}&nbsp;</span>
+                                    <span class="glyphicon glyphicon-thumbs-up pull-right" title="Like"> {{this.likes}}&nbsp;</span>
+
+                                </div>
+                                <div class="panel-body">
+                                    <p>{{this.comment}}</p>
+                                </div>
+                            </div>
+                        {{/if_eq}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+                        {{/if_eq}}
+                        {{/each}}
+        {{/each}}
+</div>

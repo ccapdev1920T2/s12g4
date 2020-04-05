@@ -1,0 +1,46 @@
+{{>navbar}}
+ <style>
+    body{
+        background-image: url('img/aerialwalk.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 style="color: black;">Write Review for {{it_name}}</h2>
+        </div>
+        <form method="POST">
+        <div class="col-lg-2">
+            <h2><button type="submit" id="review" class="btn btn-success btn-block">Save Review</button></h2>
+        </div>
+        <div class="col-lg-2">
+            <h2><a href="/itineraries" class="btn btn-success btn-block" role="button" >Back to Itineraries</a></h2>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label for="stars">Star Rating:</label>
+                        <select id="stars" name="stars" required>
+                            <option value="1.0">1.0</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2.0">2.0</option>
+                            <option value="2.5">2.5</option>
+                            <option value="3.0">3.0</option>
+                            <option value="3.5">3.5</option>
+                            <option value="4.0">4.0</option>
+                            <option value="4.5">4.5</option>
+                            <option value="5.0">5.0</option>
+                        </select>
+                    </div>
+                    <div class="panel-body">
+                        <textarea class="form-control" rows="5" id="content" placeholder="Write a review for this itinerary" name="content" required></textarea>
+                        <input type="text" id="revIt_id" name="it_id" value="{{it_id}}" hidden>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

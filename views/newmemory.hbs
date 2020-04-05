@@ -1,0 +1,53 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/Parasailing.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 no-padding">
+            <h2>New Memory</h2>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            <button type="submit" id="memory" class="btn btn-success">Create Memory</button>
+            <div class="form-group">
+                <label for="title">
+                    <h4>MEMORY TITLE:</h4></label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+                <textarea class="form-control" rows="5" id="comment" placeholder="Write a description for this travel memory" name="comment" required></textarea>
+                <br>
+            </div>
+
+            <div>
+                <label for="startdate">START DATE:</label>
+                <input type="date" id="startdate" name='sdate' required>
+                <label for="enddate">END DATE:</label>
+                <input type="date" id="enddate" name='edate' required>
+                <label for="expense">TOTAL EXPENSES:</label>
+                <input type="text" id="expense" name='expense' placeholder="USD500" required>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <label for="photo">Choose Photos to Upload: </label>
+            <br>
+            <input type="file" id="imgInput" accept="image/*" onchange='loadFile(event)' name="memimages" multiple>
+            <br>
+            <p style="color: yellow;">NOTE: Choose all the photos you want to upload in one go. Inserting another batch of photos will REMOVE the previous ones. There is no way to delete a photo. However, you may choose to replace the photo(s) anytime by editing this memory afterwards</p>
+            <br>
+            <div class="panel-heading text-center">
+                <mark>MY PHOTO ALBUM</mark>
+            </div>
+            <div id="photoalbum">
+
+            </div>
+            <input type="text" id="imageNames" name="memimageNames" hidden>
+        </form>
+    </div>
+
+</div>

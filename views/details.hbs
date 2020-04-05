@@ -1,0 +1,97 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/cliffdive.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+            <h2><a href="/dashboard" class="btn btn-success" role="button">Back to Dashboard</a></h2>
+        </div>
+        <div class="col-lg-2">
+            <h2><a href="/download_it" class="btn btn-info" role="button" id="it_viewDownload" download>Download Itinerary</a></h2>
+        </div>
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3><mark>{{it_name}}</mark></h3>
+                        <h3><mark>{{it_id}}</mark></h3>
+                        <h4>{{it_sdate}} - {{it_edate}}</h4>
+                        <h4>{{it_location}}</h4>
+                    </div>
+                
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <thead>
+                             <tr>
+                                <th>Activity Name</th>
+                                <th>Date</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Estimated Cost</th>
+                                <th>Address</th>
+                                <th>Contact Person</th>
+                                <th>Contact Number</th>
+                                <th>Contact Email</th>
+                                <th>Mode of Transportation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each activity}}
+                                <!--If handlebars for those fields that are not required-->
+                                <tr>
+                                    <td>{{name}}</td><!--required-->
+                                    <td>{{dateFormat date}}</td><!--required-->
+                                    {{#if stime}}
+                                        <td>{{stime}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                    {{#if etime}}
+                                        <td>{{etime}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                    {{#if cost}}
+                                        <td>{{cost}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                    {{#if address}}
+                                        <td>{{address}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                    {{#if cname}}
+                                        <td>{{cname}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                    {{#if cnum}}
+                                        <td>{{cnum}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                    {{#if cmail}}
+                                        <td>{{cmail}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                    {{#if transpo}}
+                                        <td>{{transpo}}</td>
+                                    {{else}}
+                                        <td>-</td>
+                                    {{/if}}
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

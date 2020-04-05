@@ -1,0 +1,53 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/mountain.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>My Travels</h2>
+        </div>
+        <div class="col-md-4">
+            <a href="newMemory" class="btn btn-success" role="button">New Memory</a>
+        </div>
+        <div class="col-md-4">
+            <form class="form-inline" action="memorySearch" method="GET">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search for title or keywords" size="32" name="search">
+                </div>
+                <button type="submit" class="btn btn-success">Search!</button>
+            </form>
+        </div>
+    </div>
+    {{#each memory}}
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <mark>{{this.title}}</mark>
+                        {{dateFormat this.sdate}} - {{dateFormat this.edate}}
+                        <p class="pull-right">{{this.totalExp}}</p>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{this.description}}</p>
+                            {{#each this.photoAlbum}}
+                                <img src="{{StringFormat this}}" height="250" width="250">
+                            {{/each}}
+                    </div>
+                    <p hidden>{{this._id}}</p>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <a href="mem_edit" class="btn btn-warning editMemory" role="button"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+            </div>
+            <div class="col-md-1">
+                <a href="javascript:void(0)" class="btn btn-danger deleteMemory" role="button"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

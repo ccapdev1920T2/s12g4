@@ -1,0 +1,37 @@
+{{>navbar}}
+ <style>
+    body{
+        background-image: url('img/aerialwalk.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 style="color: black;">Review for {{it_name}}</h2>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-2">
+            <h2><a href="/itineraries" class="btn btn-success btn-block" role="button" >Back to Itineraries</a></h2>
+        </div>
+        <div class="col-lg-2">
+            <h2><a href="/editReview" class="btn btn-info btn-block" role="button" id="viewEditReview">Edit Review</a></h2>
+        </div>
+        <div class="col-lg-2">
+            <h2><a href="/itineraries" class="btn btn-danger btn-block" role="button" id="deleteReview">Delete Review</a></h2>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-12">
+            <div class="panel panel-danger fixed-panel">
+                <div class="panel-heading">
+                    {{stars}} Stars<br>
+                    {{dateFormat date}} {{time}}
+                </div>
+                <div class="panel-body">
+                    <p>{{content}}</p>
+                </div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,128 @@
+ {{> header}}
+ <style>
+    body{
+        background-image: url('img/pulag.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="regis-container">
+    <form method="POST">
+        <br>
+        <div class="row">
+            <h1 class="text"><b>{{title}}</b></h1>
+            <br>
+        </div>
+        <div class="row">
+            <label class="label col-md-2 control-label">Complete Name</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="Lname" placeholder="Enter Last Name" required>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="Fname" placeholder="Enter First Name" required>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label class="label col-md-2 control-label">Email</label>
+            <div class="col-md-4">
+                <input type="Email" class="form-control" name="email" placeholder="Enter Email" required>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+        <br>
+        <div class="row">
+            <label class="label col-md-2 control-label">Username</label>
+            <div class="col-md-4">
+                <input type="text" id="RegUsername" class="form-control" name="username" placeholder="Enter Username" required>
+            </div>
+            <div class="col-md-2"><p id='usererr'></p></div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label class="label col-md-2 control-label">Password</label>
+            <div class="col-md-4">
+                <input type="password" class="form-control" name="password" placeholder="Enter Password" id="password" onkeyup='check();' required>
+            </div>
+            <div class="col-md-4">
+                <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" id="cpassword" onkeyup='check();' required>
+            </div>
+            <div class="col-md-2"><span id='message'></span></div>
+            
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label class="label col-md-2 control-label">Birthday</label>
+            <div class="col-md-4">
+                <input type="date" class="form-control" name="birthday" id="birthday" required>
+            </div>
+            <div class="col-md-4"><p id='bdayerr'></p></div>
+            
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label class="label col-md-2 control-label">Address</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="city" placeholder="Enter City" required>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="country" placeholder="Enter Country" required>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label class="label col-md-2 control-label">Occupation</label>
+            <div class="col-md-2">
+                <input type="radio" name="occupation" value="student" required>
+                <label for="student">Student</label>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <input type="radio" name="occupation" value="Businessman" required>
+                <label for="businessman">Businessman</label>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <input type="radio" name="occupation" value="Employee" required>
+                <label for="Employee">Employee</label>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <input type="radio" name="occupation" value="Other" required>
+                <label for="Other">Other</label>
+                <br>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label class="label col-md-2 control-label">Passport I.D.</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="ppid" placeholder="Enter Passport ID (Optional)">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-2">
+            	<button type="submit" id="register" class="btn btn-success" style="width: 150px;" disabled>Register</button>
+            </div>
+        </div>
+    </form>
+</div>

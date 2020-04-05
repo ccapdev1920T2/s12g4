@@ -1,0 +1,42 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/surf.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2>Results for: "{{mem_search}}"</h2>
+        </div>
+    </div>
+    {{#each memory}}
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <mark>{{dateFormat this.sdate}}</mark>
+                        {{this.title}}
+                        <p class="pull-right">{{this.totalExp}}</p>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{this.description}}</p>
+                        {{#if this.photoAlbum}}
+                            <img src="{{ this.mem_img }}" />
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <a href="#" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+            </div>
+            <div class="col-md-1">
+                <a href="#" class="btn btn-danger delete" role="button"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+            </div>
+        </div>
+    {{/each}}
+    <a href="tracker" class="btn btn-success" role="button">Return</a>
+</div>

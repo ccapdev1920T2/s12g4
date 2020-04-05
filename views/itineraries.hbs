@@ -1,0 +1,48 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/mayon.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="col-lg-8">
+        <h2>{{title}}</h2>
+        <a href="it_create" class="btn btn-success" role="button">Create New Itinerary</a>
+        <br>
+        <br>
+    </div>
+    {{#each itinerary}}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p><mark>{{ this.it_name}}</mark></p>
+                </div>
+                <div class="panel-body">
+                    <p class="id">ID: {{this.it_id}}</p>
+                <br> <p class="sdate">Start Date: {{dateFormat this.it_sdate}}</p>
+                <br><p class="edate">End Date: {{dateFormat this.it_edate}}</p>
+                <br> <p class="loc">Location: {{this.it_location}}</p>
+                <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <a href="/it_view" class="btn btn-success view" role="button"><span class="glyphicon glyphicon-eye-open"> View</a>
+        </div>
+        <div class="col-md-1">
+            <a href="it_edit" class="btn btn-warning editItinerary" role="button"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+        </div>
+        <div class="col-md-1">
+            <a href="javascript:void(0)" class="btn btn-danger delete deleteItinerary" role="button"><span class="glyphicon glyphicon-remove"></span>  Delete</a>
+        </div>
+        <div class="col-md-1">
+            <a href="/download_it" class="btn btn-info download" role="button" download=""><span class="glyphicon glyphicon-download-alt"> Download</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,53 @@
+{{> navbar}}
+ <style>
+    body{
+        background-image: url('img/Parasailing.jpg'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 no-padding">
+            <h2>Edit Memory</h2>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            <button type="submit" id="memory" class="btn btn-success editsave">Save Memory</button>
+            <div class="form-group">
+                <label for="title">
+                    <h4>MEMORY TITLE:</h4></label>
+                <input type="text" class="form-control" id="title" name="memtitle" value="{{mem_title}}">
+                <textarea class="form-control" rows="5" id="comment"  name="memcomment">{{mem_desc}}</textarea>
+                <br>
+            </div>
+
+            <div>
+                <label for="startdate">START DATE:</label>
+                <input type="date" id="startdate" name='memsdate' value="{{memoryDateFormat mem_sdate}}">
+                <label for="enddate">END DATE:</label>
+                <input type="date" id="enddate" name='memedate' value="{{memoryDateFormat mem_edate}}">
+                <label for="expense">TOTAL EXPENSES:</label>
+                <input type="text" id="expense" name='memexpense' value="{{mem_cost}}">
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <label for="photo">Choose Photos to Upload: </label>
+            <br>
+            <input type="file" id="imgInput" accept="image/*" onchange='loadFile(event)' name="memimages" multiple>
+            <br>
+            <p style="color: yellow;">NOTE: Reuploading photo(s) will replace the previous photo(s). Choose all the photos you want to upload in one go.</p>
+            <br>
+            <div class="panel-heading text-center">
+                <mark>MY PHOTO ALBUM</mark>
+            </div>
+            <div id="photoalbum">
+
+            </div>
+            <input type="text" id="imageNames" name="memimageNames" hidden>
+        </form>
+    </div>
+
+</div>
