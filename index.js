@@ -10,8 +10,6 @@ const port = 3000;
 const db = require('./models/db.js');
 const data = require('./add_data.js');
 const moment = require('moment');
-const multer = require('multer');
-const crypto = require('crypto');
 
 app.use(bodyparser.urlencoded({
 	extended: true

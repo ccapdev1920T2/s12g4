@@ -1,7 +1,7 @@
 
 const db = require('../models/db.js');
-const mongoose = require('mongoose');
 const crypto = require('crypto');
+const sanitize = require('mongo-sanitize');
 const Account= require('../models/AccountModel.js');
 const Activity= require('../models/ActivityModel.js');
 const Comment= require('../models/CommentModel.js');
@@ -58,8 +58,8 @@ const controller = {
         res.render('success', {title: "Registration Successful"});
     },
     postLogin: function(req, res){
-        var u = req.body.username;
-        var p = req.body.password;
+        var u = sanitize(req.body.username);
+        var p = sanitize(req.body.password);
         var query = {username: u};
         var projection = null;
         var hash = crypto.createHash('sha256');
@@ -284,11 +284,11 @@ const controller = {
             res.redirect('/error')
         }
         else{
-        var it_name = req.query.it_name;
-        var it_id = req.query.it_id;
-        var it_sdate = req.query.it_sdate;
-        var it_edate = req.query.it_edate;
-        var it_location = req.query.it_location;
+        var it_name = sanitize(req.query.it_name);
+        var it_id = sanitize(req.query.it_id);
+        var it_sdate = sanitize(req.query.it_sdate);
+        var it_edate = sanitize(req.query.it_edate);
+        var it_location = sanitize(req.query.it_location);
         var query = {it_id: it_id};
         projection = null;
         db.findMany(Activity, query, projection, function(actresult){
@@ -310,12 +310,12 @@ const controller = {
         }
         else{
 
-        var it_name = req.query.it_name;
-        var it_id = req.query.it_id;
-        var it_sdate = req.query.it_sdate;
-        var it_edate = req.query.it_edate;
-        var it_location = req.query.it_location;
-        var query = {it_id: req.query.it_id};
+        var it_name = sanitize(req.query.it_name);
+        var it_id = sanitize(req.query.it_id);
+        var it_sdate = sanitize(req.query.it_sdate);
+        var it_edate = sanitize(req.query.it_edate);
+        var it_location = sanitize(req.query.it_location);
+        var query = {it_id: it_id};
         var projection = null;
 
 
@@ -466,7 +466,8 @@ const controller = {
             res.redirect('/error')
         }
         else{
-        var query = {_id: req.query._id};
+        var _id = sanitize(req.query._id);
+        var query = {_id: _id};
         var projection = null;
         db.findOne(Memory, query, projection, function(result){
             res.render('mem_edit', {title: 'Edit Memory', username: req.cookies.userData.username, mem_title: result.title, mem_desc: result.description,
@@ -513,7 +514,7 @@ const controller = {
         }
         else{
         var it_name = req.query.it_name;
-        var it_id = req.query.it_id;
+        var it_id = sanitize(req.query.it_id);
         var it_sdate = req.query.it_sdate;
         var it_edate = req.query.it_edate;
         var it_location = req.query.it_location;
@@ -526,7 +527,8 @@ const controller = {
     },
 
     getDeleteIt: function(req, res){
-        var condition = {it_id: req.query.it_id};
+        var it_id = sanitize(req.query.it_id)
+        var condition = {it_id: it_id};
         db.deleteOne(Itinerary, condition);
         db.deleteMany(Activity, condition);
     },
@@ -542,7 +544,7 @@ const controller = {
         } 
         else{ 
             var it_name = req.query.it_name; 
-            var it_id = req.query.it_id; 
+            var it_id = sanitize(req.query.it_id);
             var it_sdate = req.query.it_sdate; 
             var it_edate = req.query.it_edate; 
             var it_location = req.query.it_location; 
@@ -559,7 +561,8 @@ const controller = {
             res.redirect('/error') 
         } 
         else{ 
-            var query = {it_id: req.query.it_id};
+            var it_id = sanitize(req.query.it_id)
+            var query = {it_id: it_id};
             db.findOne(Itinerary, query, null, function(itresult){
                 db.findOne(Review, query, null, function(revresult){
                     res.render('viewReview', {title: 'Review', username: req.cookies.userData.username, it_name: itresult.it_name, stars: revresult.stars, date: revresult.date, time: revresult.time, content: revresult.content})
@@ -568,7 +571,8 @@ const controller = {
         }
     },
     getDeleteReview: function(req,res){
-        var condition = {it_id: req.query.it_id};
+        var it_id = sanitize(req.query.it_id)
+        var condition = {it_id: it_id};
         db.deleteOne(Review, condition);
     },
 
@@ -579,7 +583,8 @@ const controller = {
             res.redirect('/error') 
         } 
         else{
-            var query = {it_id: req.query.it_id};
+            var it_id = sanitize(req.query.it_id)
+            var query = {it_id: it_id};
             db.findOne(Itinerary, query, null, function(result){
                 res.render('review', {title:"Create Review", username: req.cookies.userData.username, it_name: result.it_name, it_id: result.it_id})
             })
@@ -611,7 +616,8 @@ const controller = {
             res.redirect('/error') 
         } 
         else{
-            var query = {it_id: req.query.it_id};
+            var it_id = sanitize(req.query.it_id)
+            var query = {it_id: it_id};
             db.findOne(Itinerary, query, null, function(result){
                 db.findOne(Review, query, null, function(revresult){
                     res.render('editReview', {title:"Edit Review", username: req.cookies.userData.username, it_name: result.it_name, it_id: result.it_id, stars: revresult.stars, content: revresult.content})

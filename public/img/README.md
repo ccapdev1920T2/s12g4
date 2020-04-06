@@ -1,3 +1,3 @@
-# ccapdev1920T2/s12g4/public/img
+# 18EROARY/public/img
 
 This folder contains all the image files.
