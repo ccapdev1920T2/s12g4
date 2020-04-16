@@ -193,6 +193,25 @@ const controller = {
                     transpo = "";
                 else
                     transpo = req.body.act_trans;
+                
+                var address = "";
+                if(street != "" || city != "" || zip != "")
+                {
+                    if(street != "" && city != "" && zip != "")
+                        address = street + ", " + city + ", " + zip;
+                    else if(street != "" && city != "")
+                        address = street + ", " + city;
+                    else if(street != "" && zip != "")
+                        address = street + ", " + zip;
+                    else if(city != "" && zip != "")
+                        address = city + ", " + zip;
+                    else if(street != "")
+                        address = street;
+                    else if(city != "")
+                        address = city;
+                    else if(zip != "")
+                        address = zip;
+                }
 
                 var act = {
                     it_id: req.body.act_id,
@@ -201,7 +220,7 @@ const controller = {
                     stime: stime,
                     etime: etime,
                     cost: cost,
-                    address: street + ', ' + city + ', ' + zip,
+                    address: address,
                     cname: cname,
                     cnum: cnum,
                     cmail: cmail,
@@ -226,9 +245,17 @@ const controller = {
     },
 
     postMemCreate: function(req, res){
-        var images = req.body.imageNames;
-        if(images)
-        images = images.split(" ");
+        var fileArray = req.files;
+        var location;
+        var imgLoc = [];
+        
+        if(fileArray)
+        {
+            for(let i = 0; i < fileArray.length; i++){
+                location = fileArray[i].location;
+                imgLoc.push(location);
+            }
+        }
         var memory = {
             acct_email: req.cookies.userData.email,
             title: req.body.title,
@@ -236,7 +263,7 @@ const controller = {
             sdate: req.body.sdate,
             edate: req.body.edate,
             totalExp: req.body.expense,
-            photoAlbum: images
+            photoAlbum: imgLoc
         }
         db.insertOne(Memory, memory);
         res.redirect('/tracker');
@@ -478,8 +505,25 @@ const controller = {
     },
 
     postMemEdit: function(req, res){
-        var images = req.body.memimageNames;
-        if(images === "")
+        var fileArray = req.files;
+        var location;
+        var imgLoc = [];
+        if(fileArray)
+        {
+            for(let i = 0; i < fileArray.length; i++){
+                location = fileArray[i].location;
+                imgLoc.push(location);
+            }
+            var update = {
+                title: req.body.memtitle,
+                description: req.body.memcomment,
+                sdate: req.body.memsdate,
+                edate: req.body.memedate,
+                totalExp: req.body.memexpense,
+                photoAlbum: imgLoc
+            }
+        }
+        else
         {
             var update = {
                 title: req.body.memtitle,
@@ -487,17 +531,6 @@ const controller = {
                 sdate: req.body.memsdate,
                 edate: req.body.memedate,
                 totalExp: req.body.memexpense,
-            }
-        }
-        else{
-            images = images.split(" ");
-            var update = {
-                title: req.body.memtitle,
-                description: req.body.memcomment,
-                sdate: req.body.memsdate,
-                edate: req.body.memedate,
-                totalExp: req.body.memexpense,
-                photoAlbum: images
             }
         }
         filter = {_id: req.query._id}
@@ -670,6 +703,13 @@ const controller = {
         var _id = req.query._id;
         condition = {_id: _id};
         db.deleteOne(Comment, condition);
+    },
+    getCheckReview: function(req, res){
+        var it_id = req.query.it_id;
+        var query = {it_id: it_id};
+        db.findOne(Review, query, "it_id", function(result){
+            res.send(result);
+        })
     }
 }
 module.exports = controller;

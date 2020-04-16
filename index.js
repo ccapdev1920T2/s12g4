@@ -6,10 +6,10 @@ const bodyparser = require('body-parser');
 const cookieparser = require('cookie-parser');
 const handlebars = require('handlebars');
 const app = express ();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const db = require('./models/db.js');
-const data = require('./add_data.js');
 const moment = require('moment');
+const data = require('./add_data.js');
 
 app.use(bodyparser.urlencoded({
 	extended: true
@@ -45,7 +45,7 @@ handlebars.registerHelper('if_eq', function(a, b, opts) {
 app.use('/', routes)
 
 db.connect();
-data.addData();
+//data.addData();
 
 app.listen(port, function(){
 	console.log('App listening at port ' + port);

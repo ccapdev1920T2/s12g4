@@ -23,17 +23,13 @@
             <div class="panel panel-default">
                     <div class="panel-heading">
                         <label for="stars">Star Rating:</label>
-                        <select id="stars" name="stars" required>
-                            <option value="1.0">1.0</option>
-                            <option value="1.5">1.5</option>
-                            <option value="2.0">2.0</option>
-                            <option value="2.5">2.5</option>
-                            <option value="3.0">3.0</option>
-                            <option value="3.5">3.5</option>
-                            <option value="4.0">4.0</option>
-                            <option value="4.5">4.5</option>
-                            <option value="5.0">5.0</option>
-                        </select>
+                        <span class="glyphicon glyphicon-star" id="star1" style="color: rgb(231, 231, 59);"></span>
+                        <span class="glyphicon glyphicon-star" id="star2"></span>
+                        <span class="glyphicon glyphicon-star" id="star3"></span>
+                        <span class="glyphicon glyphicon-star" id="star4"></span>
+                        <span class="glyphicon glyphicon-star" id="star5"></span>
+                        <span id='starCount'>1</span>
+                        <input type="number" min="1" max="5" id='stars' name="stars" value="1" hidden>
                     </div>
                     <div class="panel-body">
                         <textarea class="form-control" rows="5" id="content" placeholder="Write a review for this itinerary" name="content" required></textarea>

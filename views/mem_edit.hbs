@@ -24,13 +24,13 @@
 
             <div>
                 <label for="startdate">START DATE:</label>
-                <input type="date" id="startdate" name='memsdate' value="{{memoryDateFormat mem_sdate}}">
+                <input type="date" id="editstartdate" name='memsdate' value="{{memoryDateFormat mem_sdate}}">
                 <label for="enddate">END DATE:</label>
-                <input type="date" id="enddate" name='memedate' value="{{memoryDateFormat mem_edate}}">
+                <input type="date" id="editenddate" name='memedate' value="{{memoryDateFormat mem_edate}}">
                 <label for="expense">TOTAL EXPENSES:</label>
                 <input type="text" id="expense" name='memexpense' value="{{mem_cost}}">
             </div>
-
+            <p id='memError'></p>
             <br>
             <hr>
             <br>

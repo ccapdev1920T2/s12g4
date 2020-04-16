@@ -1,15 +1,37 @@
 const express = require('express');
 const controller = require('../controllers/controller.js');
 const multer = require('multer');
-const storage = multer.diskStorage({
-    destination: function(req, file, cb){
-        cb(null, './public/img/');
-    },
-    filename: function(req, file, cb){
-        cb(null, file.originalname)
+const multers3 = require('multer-s3');
+const aws = require('aws-sdk');
+const path = require('path')
+const s3 = new aws.S3({
+    accessKeyId: process.env.ACCESS_KEY,
+    secretAccessKey: process.env.SECRET_ACCESS,
+    Bucket: 'onclick'
+})
+
+
+const upload = multer({
+    storage: multers3({
+        s3: s3,
+        bucket: 'onclick',
+        acl: 'public-read',
+        key: function(req, file, cb) {
+            cb(null, file.originalname)
+        }
+    }),
+    fileFilter: function (req, file, cb){
+        const filetypes = /jpeg|jpg|png|gif/;
+        const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+        const mimetype = filetypes.test(file.mimetype);
+        if(mimetype && extname){
+            return cb(null, true);
+        }
+        else{
+           return cb(null, false);
+        }
     }
 });
-const upload = multer({storage: storage});
 
 const app = express();
 
@@ -75,6 +97,8 @@ app.get('/editComment', controller.getEditComment);
 
 app.get('/deleteComment', controller.getDeleteComment);
 
+app.get('/checkReview', controller.getCheckReview);
+
 app.post('/editReview', controller.postEditReview);
 
 app.post('/review', controller.postReview);
@@ -83,7 +107,7 @@ app.post('/login', controller.postLogin);
 
 app.post('/registration', controller.postRegistration);
 
-app.post('/newmemory', upload.array('images', 5) ,controller.postMemCreate);
+app.post('/newmemory', upload.array('memimages', 5) ,controller.postMemCreate);
 
 app.post('/mem_edit',  upload.array('memimages', 5), controller.postMemEdit);
 

@@ -11,7 +11,7 @@ const Review= require('./ReviewModel.js');
 
 
 // ccapdev-mongoose is the name of the database
-const url = 'mongodb://localhost:27017/18EROARY';
+const url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/18EROARY';
 
 // additional connection options
 const options = {

@@ -15,10 +15,10 @@
         {{#each itinerary}}
             <div class="col-lg-8">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><span class="pull-right"><a href="/details" class="seeDetails">See details</a></span>
+                            <div class="panel-heading">{{#if_eq ../email this.acct_email}}<span class="pull-right"><u><a href="/" class="dashboardReview" style="color: black;">Write/Edit Review</a></u></span><span class="pull-right" style="color: black;">&nbsp;|&nbsp;</span>{{/if_eq}}<span class="pull-right"><u><a href="/download_it" class="dashboardDownload" download="" style="color: black;">Download</a></u></span><span class="pull-right" style="color: black;">&nbsp;|&nbsp;</span> <span class="pull-right"><u><a href="/detail" class="seeDetails" style="color: black;">See details</a></u></span>
                                 <h3 class='title'><mark>{{this.it_name}}</mark></h3>
                                 <h4 class='id' ><mark>{{this.it_id}}</mark></h4>
-                                <h4 class='date'>{{dateFormat this.it_sdate}} - {{dateFormat this.it_edate}}</h4><span class="pull-right"><a href="/download_it" class="dashboardDownload" download="">Download</a></span>
+                                <h4 class='date'>{{dateFormat this.it_sdate}} - {{dateFormat this.it_edate}}</h4>
                                 <h4 class='loc'>{{this.it_location}}</h4>
                             </div>
                         </div>
@@ -32,9 +32,30 @@
                     <input type="text" class="nameCom" value="{{../../fname}} {{../../lname}}" hidden>
                     <div class="panel-footer">Review<span class="comment pull-right" title="Write a Comment"><u class="createComment commentNum">Write a Comment</u></span></div>
                     <div class="panel-heading">
-                                {{this.stars}} Star(s) by {{this.name}}
-                                
-                                <br> {{dateFormat this.date}} {{this.time}}
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        {{#if_eq this.stars 1}}<span class="glyphicon glyphicon-star"></span>
+                                          <span class="glyphicon glyphicon-star"></span>
+                                          <span class="glyphicon glyphicon-star"></span>
+                                          <span class="glyphicon glyphicon-star"></span>{{/if_eq}}
+                        {{#if_eq this.stars 2}}<span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star"></span>
+                                          <span class="glyphicon glyphicon-star"></span>
+                                          <span class="glyphicon glyphicon-star"></span>{{/if_eq}}
+                        {{#if_eq this.stars 3}}<span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star"></span>
+                                          <span class="glyphicon glyphicon-star"></span>{{/if_eq}}
+                        {{#if_eq this.stars 4}}<span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star" ></span>{{/if_eq}}
+                        {{#if_eq this.stars 5}}<span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                                          <span class="glyphicon glyphicon-star" style="color: yellow;"></span>{{/if_eq}}
+                        by {{this.name}}
+                        
+                        <br> {{dateFormat this.date}} {{this.time}}
                     </div>
                     <div class="panel-body comment">
                         <p>{{this.content}}</p>

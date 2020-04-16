@@ -16,10 +16,10 @@
             <button type="submit"  form="itform" name="saveIt" id="saveIt" class="btn btn-success editsave">Save Itinerary</button>
                 <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3><mark><input type="text" id="it_name" name="itname" value="{{it_name}}"></mark></h3>
-                                <h3><mark><input type="text" id="edit_id" name="editid" value="{{it_id}}" readonly></mark></h3>
+                                <h3><input type="text" id="it_name" name="itname" value="{{it_name}}"></h3>
+                                <h3><input type="text" id="edit_id" name="editid" value="{{it_id}}" hidden></h3>
                                 <h4><input type="date" id="it_sdate" name="itsdate" value="{{memoryDateFormat it_sdate}}"> - 
-                                <input type="date" id="it_edate" name="itedate" value="{{memoryDateFormat it_edate}}"></h4>
+                                <input type="date" id="it_edate" name="itedate" value="{{memoryDateFormat it_edate}}"> <span id='itEditError'></span></h4>
                                 <h4><input type="text" id="it_location" name="itlocation" value="{{it_location}}"></h4>
                             </div>
                         
@@ -44,16 +44,16 @@
                                         {{#each activity}}
                                             <!--If handlebars for those fields that are not required-->
                                             <tr>
-                                                <td class="col-lg-2 no-padding" ><input type="text" id="act_name" name="actname" value="{{name}}" readonly></td><!--required-->
-                                                <td><input type="date" id="act_date" value="{{memoryDateFormat date}}"></td><!--required-->
-                                                <td><input type="text" id="act_stime" name="actstime "value="{{stime}}"></td>
-                                                <td><input type="text" id="act_etime" name="actetime" value="{{etime}}"></td>
-                                                <td><input type="text" id="act_cost" name="actcost" value="{{cost}}"></td>
-                                                <td><input type="text" id="act_address" name="actaddress" value="{{address}}"></td>
-                                                <td><input type="text" id="act_cname" name="actcname" value="{{cname}}"></td>
-                                                <td><input type="text" id="act_cnum" name="actcnum" value="{{cnum}}"></td>
-                                                <td><input type="email" id="act_cmail" name="actcmail" value="{{cmail}}"></td>
-                                                <td><input type="text" id="act_trans" name="acttrans" value="{{transpo}}"></td>
+                                                <td class="col-lg-2 no-padding" ><input type="text" class="act_name" name="actname" value="{{name}}" readonly></td><!--required-->
+                                                <td><input type="date" class="act_date" value="{{memoryDateFormat date}}"><p style="color: red;"></p></td><!--required-->
+                                                <td><input type="time" class="act_stime" name="actstime "value="{{stime}}"></td>
+                                                <td><input type="time" class="act_etime" name="actetime" value="{{etime}}"></td>
+                                                <td><input type="number" class="act_cost" name="actcost" value="{{cost}}" min="0"></td>
+                                                <td><input type="text" class="act_address" name="actaddress" value="{{address}}"></td>
+                                                <td><input type="text" class="act_cname" name="actcname" value="{{cname}}"></td>
+                                                <td><input type="text" class="act_cnum" name="actcnum" value="{{cnum}}"></td>
+                                                <td><input type="email" class="act_cmail" name="actcmail" value="{{cmail}}"></td>
+                                                <td><input type="text" class="act_trans" name="acttrans" value="{{transpo}}"></td>
                                                 <td>
                                                     <input type="submit" class=" btn btn-warning editAct"  form="actform" name="saveAct" id="saveAct" value="Update">
                                                     <input type="submit" class=" btn btn-danger delAct"  form="actform" name="deleteAct" id="deleteAct" value="Delete">

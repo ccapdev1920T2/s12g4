@@ -141,7 +141,7 @@ const data = {
 				description: 'Our prof didnt come to class today so my friends & I had lunch in Tagaytay.',
 				sdate: '02/05/2020',
 				edate: '02/05/2020',
-				totalExp: 'PHP1000',
+				totalExp: '1000',
 				photoAlbum: ['img/tagaytay.jpg']
 			},
 
@@ -151,7 +151,7 @@ const data = {
 				description: 'My family and I went to Palawan to sea (heh) the sunken ships.',
 				sdate: '05/05/2019',
 				edate: '05/07/2019',
-				totalExp: 'PHP7000',
+				totalExp: '7000',
 			},
 
 			{
@@ -199,7 +199,7 @@ const data = {
 				description: 'I went to Taytay, Rizal to buy me some UK-UK #sustainable',
 				sdate: '11/19/2019',
 				edate: '11/20/2019',
-				totalExp: 'PHP1000',
+				totalExp: '1000',
 			},
 
 			{
@@ -331,7 +331,7 @@ const data = {
 				date: 'April 20, 2020',
 				stime: '06:30',
 				etime: '10:30',
-				cost: 'Php2500/person',
+				cost: '2500',
 				cname: 'Tiger Espina',
 				cnum: '+63 912 345 6789',
 				transpo: 'DLSU Bus'
@@ -340,76 +340,76 @@ const data = {
 				it_id: 12345678,
 				name: 'Tent Set-Up',
 				date: 'April 20, 2020',
-				stime: '1:00',
-				etime: '2:00',
+				stime: '13:00',
+				etime: '14:00',
 				transpo: 'on foot'
 			},
 			{
 				it_id: 12345678,
 				name: 'Start of Team Building Activities',
 				date: 'April 20, 2020',
-				stime: '2:30',
-				etime: '6:30'
+				stime: '14:30',
+				etime: '18:30'
 			},
 			{
 				it_id: 12345678,
 				name: 'Dinner in Beach View',
 				date: 'April 20, 2020',
-				stime: '7:00',
-				etime: '9:00',
-				cost: 'Php500/person'
+				stime: '19:00',
+				etime: '21:00',
+				cost: '500'
 			},
 			{
 				it_id: 12345678,
 				name: 'Breakfast in the Patio',
 				date: 'April 21, 2020',
-				stime: '8:00',
-				etime: '9:30',
-				cost: 'Php200/person'
+				stime: '08:00',
+				etime: '09:30',
+				cost: '200'
 			},
 			{
 				it_id: 12345678,
 				name: 'Team Building Activities Day 2',
 				date: 'April 21, 2020',
 				stime: '10:00',
-				etime: '1:00'
+				etime: '13:00'
 			},
 			{
 				it_id: 12345678,
 				name: 'Boodle Fight Lunch',
 				date: 'April 21, 2020',
-				stime: '1:30',
-				etime: '3:00'
+				stime: '13:30',
+				etime: '15:00'
 			},
 			{
 				it_id: 12345678,
 				name: 'Free Time',
 				date: 'April 21, 2020',
-				stime: '3:30',
-				etime: '8:00'
+				stime: '15:30',
+				etime: '20:00'
 			},
 			{
 				it_id: 12345678,
 				name: 'Dinner & Night Life',
 				date: 'April 21, 2020',
-				stime: '8:30',
-				etime: '10:00',
-				cost: 'Php500/person'
+				stime: '20:30',
+				etime: '22:00',
+				cost: '500'
 			},
 			{
 				it_id: 12345678,
 				name: 'Breakfast in the Patio',
 				date: 'April 22, 2020',
-				stime: '8:00',
-				etime: '9:30',
-				cost: 'Php200/person'
+				stime: '08:00',
+				etime: '09:30',
+				cost: '200'
 			},
 			{
 				it_id: 12345678,
 				name: 'Back to DLSU Manila',
 				date: 'April 22, 2020',
 				stime: '10:00',
-				etime: '1:00',
+				etime: '13:00',
 				cname: 'Tiger Espina',
 				cnum: '+63 912 345 6789',
 				transpo: 'DLSU Bus'
@@ -418,9 +418,9 @@ const data = {
 				it_id: 11892019,
 				name: 'Travel to Pico',
 				date: 'September 10, 2019',
-				stime: '5:00',
-				etime: '9:00',
-				cost: 'Php700/person',
+				stime: '05:00',
+				etime: '09:00',
+				cost: '700',
 				cname: 'Admin',
 				cnum: '+63 987 654 3210',
 				transpo: 'Rented Van'
@@ -429,9 +429,9 @@ const data = {
 				it_id: 11892019,
 				name: 'Check-In',
 				date: 'September 10, 2019',
-				stime: '9:00',
+				stime: '09:00',
 				etime: '10:00',
-				cost: 'Php1500/person',
+				cost: '1500',
 				cname: 'Admin',
 				cnum: '+63 987 654 3210',
 				transpo: 'shuttle'
@@ -441,31 +441,31 @@ const data = {
 				name: 'Lunch',
 				date: 'September 10, 2019',
 				stime: '12:00',
-				etime: '2:00',
-				cost: 'Php250/person'
+				etime: '14:00',
+				cost: '250'
 			},
 			{
 				it_id: 11892019,
 				name: 'Leisure Time',
 				date: 'September 10, 2019',
-				stime: '2:00',
-				etime: '12:00'
+				stime: '14:00',
+				etime: '00:00'
 			},
 			{
 				it_id: 11892019,
 				name: 'Night Life',
 				date: 'September 11, 2019',
-				stime: '12:00',
-				etime: '4:00',
+				stime: '00:00',
+				etime: '04:00',
 				transpo: 'shuttle'
 			},
 			{
 				it_id: 11892019,
 				name: 'Travel to Manila',
 				date: 'September 11, 2019',
-				stime: '5:00',
-				etime: '9:00',
-				cost: 'Php700/person',
+				stime: '05:00',
+				etime: '09:00',
+				cost: '700',
 				cname: 'Admin',
 				cnum: '+63 987 654 3210',
 				transpo: 'Rented Van'
@@ -474,7 +474,7 @@ const data = {
 				it_id: 87654321,
 				name: 'Visit all Temples',
 				date: 'June 12, 2018',
-				cost: '¥7000/person',
+				cost: '7000',
 				cname: 'Arigato',
 				cnum: '+63 987 654 3210',
 				transpo: 'Bullet Train'
@@ -483,7 +483,7 @@ const data = {
 				it_id: 87654321,
 				name: 'Ramen Hopping',
 				date: 'June 13, 2018',
-				cost: '¥2500/person',
+				cost: '2500',
 				cname: 'Onegaishimasu',
 				cnum: '+63 987 654 3210',
 				transpo: 'on foot'
@@ -492,7 +492,7 @@ const data = {
 				it_id: 87654321,
 				name: 'SHOPPING SHOPPING',
 				date: 'June 14, 2018',
-				cost: '¥20000/person',
+				cost: '20000',
 				cname: 'Yehes Talap',
 				cnum: '+63 987 654 3210',
 				transpo: 'Commute'
@@ -501,7 +501,7 @@ const data = {
 				it_id: 87654321,
 				name: 'Stay at Home',
 				date: 'June 15, 2018',
-				cost: '¥000000/person',
+				cost: '000000',
 				cname: 'La Na Arep',
 				cnum: '+63 987 654 3210'
 			},
@@ -509,7 +509,7 @@ const data = {
 				it_id: 13572468,
 				name: 'Visit all Parks',
 				date: 'October 10, 2020',
-				cost: 'AUD7000/person',
+				cost: '7000',
 				cname: 'Maria',
 				cnum: '+63 987 654 3210',
 				transpo: 'Train'
@@ -518,7 +518,7 @@ const data = {
 				it_id: 13572468,
 				name: 'Bar Hopping',
 				date: 'October 11, 2020',
-				cost: 'AUD2500/person',
+				cost: '2500',
 				cname: 'Christopher',
 				cnum: '+63 987 654 3210',
 				transpo: 'on foot'
@@ -527,7 +527,7 @@ const data = {
 				it_id: 13572468,
 				name: 'SHOPPING SHOPPING',
 				date: 'October 12, 2020',
-				cost: 'AUD20000/person',
+				cost: '20000',
 				cname: 'Yehes Talap',
 				cnum: '+63 987 654 3210',
 				transpo: 'Commute'
@@ -536,7 +536,7 @@ const data = {
 				it_id: 13572468,
 				name: 'Stay at Home',
 				date: 'October 13, 2020',
-				cost: 'AUD000000/person',
+				cost: '000000',
 				cname: 'La Na Arep',
 				cnum: '+63 987 654 3210'
 			},
@@ -544,7 +544,7 @@ const data = {
 				it_id: 18273645,
 				name: 'Visit all Parks',
 				date: 'June 11, 2020',
-				cost: 'HK$7000/person',
+				cost: '7000',
 				cname: 'Maria',
 				cnum: '+63 987 654 3210',
 				transpo: 'Train'
@@ -553,7 +553,7 @@ const data = {
 				it_id: 18273645,
 				name: 'Bar Hopping',
 				date: 'June 12, 2020',
-				cost: 'HK$2500/person',
+				cost: '2500',
 				cname: 'Christopher',
 				cnum: '+63 987 654 3210',
 				transpo: 'on foot'
@@ -562,7 +562,7 @@ const data = {
 				it_id: 18273645,
 				name: 'SHOPPING SHOPPING',
 				date: 'June 13, 2020',
-				cost: 'HK$20000/person',
+				cost: '20000',
 				cname: 'Yehes Talap',
 				cnum: '+63 987 654 3210',
 				transpo: 'Commute'
@@ -571,7 +571,7 @@ const data = {
 				it_id: 18273645,
 				name: 'Stay at Home',
 				date: 'June 14, 2020',
-				cost: 'HK$000000/person',
+				cost: '000000',
 				cname: 'La Na Arep',
 				cnum: '+63 987 654 3210'
 			},
@@ -579,7 +579,7 @@ const data = {
 				it_id: 24681357,
 				name: 'Visit all Museums',
 				date: 'September 9, 2020',
-				cost: 'S$7000/person',
+				cost: '000',
 				cname: 'Maymay',
 				cnum: '+63 987 654 3210',
 				transpo: 'Train'
@@ -588,7 +588,7 @@ const data = {
 				it_id: 24681357,
 				name: 'Carshow Hopping',
 				date: 'September 10, 2020',
-				cost: 'S$2500/person',
+				cost: '2500',
 				cname: 'Edriane',
 				cnum: '+63 987 654 3210',
 				transpo: 'on foot'
@@ -597,7 +597,7 @@ const data = {
 				it_id: 24681357,
 				name: 'SHOPPING SHOPPING',
 				date: 'September 11, 2020',
-				cost: 'S$20000/person',
+				cost: '20000',
 				cname: 'Yehes Talap',
 				cnum: '+63 987 654 3210',
 				transpo: 'Commute'
@@ -606,7 +606,7 @@ const data = {
 				it_id: 24681357,
 				name: 'Stay at Home',
 				date: 'September 12, 2020',
-				cost: 'S$000000/person',
+				cost: '000000',
 				cname: 'La Na Arep',
 				cnum: '+63 987 654 3210'
 			},
@@ -617,7 +617,7 @@ const data = {
 				stime: '06:30',
 				etime: '07:00',
 				transpo: 'Tricycle',
-				cost: 'Php900/person',
+				cost: '900',
 				cname: 'Kuya Wendel',
 				cnum: '+63 919 608 4313'
 			},
@@ -628,7 +628,7 @@ const data = {
 				stime: '07:00',
 				etime: '08:00',
 				transpo: 'on foot',
-				cost: 'Php750/person'
+				cost: '750'
 			},
 			{
 				it_id: 41253401,
@@ -643,7 +643,7 @@ const data = {
 				date: 'January 15, 2020',
 				stime: '12:00',
 				etime: '13:00',
-				cost: 'Php250/person'
+				cost: '250'
 			},
 			{
 				it_id: 41253401,
@@ -657,7 +657,7 @@ const data = {
 				date: 'January 15, 2020',
 				stime: '16:00',
 				etime: '17:00',
-				cost: 'Php750/person',
+				cost: '750',
 				transpo: 'on foot'
 			},
 			{
@@ -666,7 +666,7 @@ const data = {
 				date: 'January 15, 2020',
 				stime: '18:00',
 				etime: '21:00',
-				cost: 'Php350/person',
+				cost: '350',
 				transpo: 'Bus'
 			},
 			{
@@ -675,7 +675,7 @@ const data = {
 				date: 'October 15, 2019',
 				stime: '09:30',
 				etime: '10:30',
-				cost: 'Php16/person',
+				cost: '16',
 				address: "Pedro Gil St, Santa Ana, Manila, Metro Manila",
 				transpo: 'Jeep'
 			},
@@ -685,7 +685,7 @@ const data = {
 				date: 'October 15, 2019',
 				stime: '10:45',
 				etime: '11:45',
-				cost: 'Php20/person',
+				cost: '20',
 				address: "2000 M. H. Del Pilar St, Malate, Manila, 1004 Metro Manila",
 				transpo: 'Jeep'
 			},
@@ -695,7 +695,7 @@ const data = {
 				date: 'October 15, 2019',
 				stime: '12:00',
 				etime: '12:30',
-				cost: 'Php200/person',
+				cost: '200',
 				address: "1002 Metro Manila",
 				transpo: 'Jeep'
 			},
@@ -725,18 +725,20 @@ const data = {
 			{
 				acct_email: "justfernandez@gmail.com",
 				it_id: 41253401,
+				name: "Justine Fernandez",
 				date: "January 16, 2020",
 				time: "17:15",
 				content: "This itinerary is perfect for anyone who loves mother nature and a good exercise." +
-				"The number of tourists are not overcrowded during this time of the year, and our tour guide is very polite!" +
+				"The number of tourists are not overcrowded during this time of the year, and our tour guide is very polite! " +
 				"Might revisit this place again soon.",
-				stars: 4.5
+				stars: 4
 			},
 			{
 				acct_email: "jedtan@gmail.com",
 				it_id: 8609943,
+				name: "Jed Tan",
 				date: "October 16, 2019",
-				time: "08:45:15",
+				time: "08:45",
 				content: "If you are a religious person like me, then you will love this itinerary." +
 				"It is a perfect trip especially during Holy Week. Try to visit your local churches sometime, it is very fun and relaxing!",
 				stars: 5

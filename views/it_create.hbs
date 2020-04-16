@@ -47,7 +47,7 @@
                                     <input type="text" id="act_id" name="act_id" hidden>
                                     <table id="morefield">
                                         <tr>
-                                            <td colspan="4" style="border-bottom: 2px solid #aaa"><strong>Activity Information</strong>
+                                            <td colspan="4" style="border-bottom: 2px solid #aaa"><strong>Activity Information</strong><span class='pull-right'></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -67,7 +67,7 @@
                                         </tr>
                                         <tr>
                                             <td><label for="act_cost">Expected Cost:</label></td>
-                                            <td><input type="number" id="act_cost" name="act_cost"></td>
+                                            <td><input type="number" id="act_cost" name="act_cost" min="0"></td>
                                         </tr>
                                         <tr>
                                             <td colspan="4" style="border-bottom: 2px solid #aaa"><strong>Exact Location</strong>
@@ -97,7 +97,7 @@
                                         </tr>
                                     </table>
                                 </form>
-                                <center style="background-color: #eee;"><button name="addAct" id="add" type="submit" class="btn btn-success" form="actForm">ADD ACTIVITY</button></center>
+                                <center style="background-color: #eee;"><button name="addAct" id="add" type="submit" class="btn btn-success" form="actForm" disabled>ADD ACTIVITY</button></center>
                             </div>
                         </div>
                     </td>

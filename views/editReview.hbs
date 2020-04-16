@@ -23,17 +23,29 @@
             <div class="panel panel-default">
                     <div class="panel-heading">
                         <label for="stars">Star Rating:</label>
-                        <select id="stars" name="stars" required>
-                            {{#if_eq stars 1}}<option value="1.0" selected>1.0</option>{{else}}<option value="1.0">1.0</option>{{/if_eq}}
-                            {{#if_eq stars 1.5}}<option value="1.5" selected>1.5</option>{{else}}<option value="1.5">1.5</option>{{/if_eq}}
-                            {{#if_eq stars 2}}<option value="2.0" selected>2.0</option>{{else}}<option value="2.0">2.0</option>{{/if_eq}}
-                            {{#if_eq stars 2.5}}<option value="2.5" selected>2.5</option>{{else}}<option value="2.5">2.5</option>{{/if_eq}}
-                           {{#if_eq stars 3}}<option value="3.0" selected>3.0</option>{{else}}{{/if_eq}}
-                            {{#if_eq stars 3.5}}<option value="3.5" selected>3.5</option>{{else}}<option value="3.5">3.5</option>{{/if_eq}}
-                            {{#if_eq stars 4}}<option value="4.0" selected>4.0</option>{{else}}<option value="4.0">4.0</option>{{/if_eq}}
-                            {{#if_eq stars 4.5}}<option value="4.5" selected>4.5</option>{{else}}<option value="4.5">4.5</option>{{/if_eq}}
-                            {{#if_eq stars 5}}<option value="5.0" selected>5.0</option>{{else}}<option value="5.0">5.0</option>{{/if_eq}}
-                        </select>
+                                          <span class="glyphicon glyphicon-star" id="star1" style="color: rgb(231, 231, 59);"></span>
+                        {{#if_eq stars 1}}<span class="glyphicon glyphicon-star" id="star2"></span>
+                                          <span class="glyphicon glyphicon-star" id="star3"></span>
+                                          <span class="glyphicon glyphicon-star" id="star4"></span>
+                                          <span class="glyphicon glyphicon-star" id="star5"></span>{{/if_eq}}
+                        {{#if_eq stars 2}}<span class="glyphicon glyphicon-star" id="star2" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star3"></span>
+                                          <span class="glyphicon glyphicon-star" id="star4"></span>
+                                          <span class="glyphicon glyphicon-star" id="star5"></span>{{/if_eq}}
+                        {{#if_eq stars 3}}<span class="glyphicon glyphicon-star" id="star2" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star3" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star4"></span>
+                                          <span class="glyphicon glyphicon-star" id="star5"></span>{{/if_eq}}
+                        {{#if_eq stars 4}}<span class="glyphicon glyphicon-star" id="star2" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star3" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star4" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star5"></span>{{/if_eq}}
+                        {{#if_eq stars 5}}<span class="glyphicon glyphicon-star" id="star2" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star3" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star4" style="color: rgb(231, 231, 59);"></span>
+                                          <span class="glyphicon glyphicon-star" id="star5" style="color: rgb(231, 231, 59);"></span>{{/if_eq}}
+                        <span id='starCount'>{{stars}}</span>
+                        <input type="number" min="1" max="5" id='stars' name="stars" value="{{stars}}" hidden>
                     </div>
                     <div class="panel-body">
                         <textarea class="form-control" rows="5" id="content" placeholder="Write a review for this itinerary" name="content" required>{{content}}</textarea>
