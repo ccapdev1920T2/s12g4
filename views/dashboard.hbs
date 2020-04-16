@@ -15,7 +15,7 @@
         {{#each itinerary}}
             <div class="col-lg-8">
                         <div class="panel panel-default">
-                            <div class="panel-heading">{{#if_eq ../email this.acct_email}}<span class="pull-right"><u><a href="/" class="dashboardReview" style="color: black;">Write/Edit Review</a></u></span><span class="pull-right" style="color: black;">&nbsp;|&nbsp;</span>{{/if_eq}}<span class="pull-right"><u><a href="/download_it" class="dashboardDownload" download="" style="color: black;">Download</a></u></span><span class="pull-right" style="color: black;">&nbsp;|&nbsp;</span> <span class="pull-right"><u><a href="/detail" class="seeDetails" style="color: black;">See details</a></u></span>
+                            <div class="panel-heading">{{#if_eq ../email this.acct_email}}<span class="pull-right"><u><a href="javascript:void(0)" class="dashboardReview" style="color: black;">Write/Edit Review</a></u></span><span class="pull-right" style="color: black;">&nbsp;|&nbsp;</span>{{/if_eq}}<span class="pull-right"><u><a href="/download_it" class="dashboardDownload" download="" style="color: black;">Download</a></u></span><span class="pull-right" style="color: black;">&nbsp;|&nbsp;</span> <span class="pull-right"><u><a href="/detail" class="seeDetails" style="color: black;">See details</a></u></span>
                                 <h3 class='title'><mark>{{this.it_name}}</mark></h3>
                                 <h4 class='id' ><mark>{{this.it_id}}</mark></h4>
                                 <h4 class='date'>{{dateFormat this.it_sdate}} - {{dateFormat this.it_edate}}</h4>
