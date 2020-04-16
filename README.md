@@ -17,22 +17,9 @@ The web application is an itinerary maker in which the user can search for activ
 
 ## Setting-Up:
 
-1. Clone the repository either by downloading the contents of the repository [here](link), or using the command below (Note: git should be installed in your system for this to work).
+1. Go to the link below to access the web application:
 ```
-git clone https://github.com/link
-```
-2. Open Command Prompt
-3. Navigate to the project folder - the folder containing the contents of the cloned or downloaded repository.
-4. Run the command `npm install` to initialize and install all necessary modules used in the project.
-
-5. We may now run our server. To do this, we run the command `node index.js`. Upon running the command, your Command Prompt should display the following statements:
-```
-app listening at port 3000
-{dummy data added}
-```
-6. Let's test our web application. Go to the link below to access the web application:
-```
-http://localhost:3000/
+http://s12gr4.herokuapp.com/
 ```
 
 In this page, an 'About Us' page would be presented and by clicking on the 'Proceed to Home Page' button you can either login (as an existing user) or register (as a new user) to be able to navigate through the features.
