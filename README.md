@@ -6,20 +6,37 @@ The web application is an itinerary maker in which the user can search for activ
 
 ## Contents:
 
-- [controllers](https://github.com/ccapdev1920T2/s12g4/tree/master/controllers) - This folder contains files which defines callback functions for client requests.
-- [models](https://github.com/ccapdev1920T2/s12g4/tree/master/models) - This folder contains files for database modeling and access.
-- [public](https://github.com/ccapdev1920T2/s12g4/tree/master/public) - This folder contains static assets such as css, js, and image files.
-- [routes](https://github.com/ccapdev1920T2/s12g4/tree/master/routes) - This folder contains files which describes the response of the server for each HTTP method request to a specific path in the server.
-- [views](https://github.com/ccapdev1920T2/s12g4/tree/master/views) - This folder contains all hbs files to be rendered when requested from the server.
-- [add_data.js](https://github.com/ccapdev1920T2/s12g4/blob/master/add_data.js) - This file adds dummy data in the database.
-- [delete_data.js](https://github.com/ccapdev1920T2/s12g4/blob/master/delete_data.js) - This file drops all collections in the database.
-- [index.js](https://github.com/ccapdev1920T2/s12g4/blob/master/index.js) - The main entry point of the web application.
+- [controllers](https://github.com/ccapdev1920T2/s12g4/tree/Phase_3/controllers) - This folder contains files which defines callback functions for client requests.
+- [models](https://github.com/ccapdev1920T2/s12g4/tree/Phase_3/models) - This folder contains files for database modeling and access.
+- [public](https://github.com/ccapdev1920T2/s12g4/tree/Phase_3/public) - This folder contains static assets such as css, js, and image files.
+- [routes](https://github.com/ccapdev1920T2/s12g4/tree/Phase_3/routes) - This folder contains files which describes the response of the server for each HTTP method request to a specific path in the server.
+- [views](https://github.com/ccapdev1920T2/s12g4/tree/Phase_3/views) - This folder contains all hbs files to be rendered when requested from the server.
+- [add_data.js](https://github.com/ccapdev1920T2/s12g4/blob/Phase_3/add_data.js) - This file adds dummy data in the database.
+- [delete_data.js](https://github.com/ccapdev1920T2/s12g4/blob/Phase_3/delete_data.js) - This file drops all collections in the database.
+- [index.js](https://github.com/ccapdev1920T2/s12g4/blob/Phase_3/index.js) - The main entry point of the web application.
 
 ## Setting-Up:
 
-1. Go to the link below to access the web application:
+Go to the link below to access the web application:
 ```
 http://s12g4.herokuapp.com/
+```
+
+To set-up the application locally:
+1. Clone the repository either by downloading the contents of the repository [here](https://github.com/ccapdev1920T2/s12g4/archive/Phase_3.zip), or using the command below (Note: git should be installed in your system for this to work).
+```
+git clone https://github.com/ccapdev1920T2/s12g4.git
+```
+2. Open Command Prompt
+3. Navigate to the project folder - the folder containing the contents of the cloned or downloaded repository.
+4. Run the command `npm install` to initialize and install all necessary modules used in the project.
+5. We may now run our server. To do this, we run the command `npm start`. Upon running the command, your Command Prompt should display the following statements:
+```
+app listening at port 3000
+```
+6. Let's test our web application. Go to the link below to access the web application:
+```
+http://localhost:3000/
 ```
 
 In this page, an 'About Us' page would be presented and by clicking on the 'Proceed to Home Page' button you can either login (as an existing user) or register (as a new user) to be able to navigate through the features.
