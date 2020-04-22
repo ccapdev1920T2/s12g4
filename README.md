@@ -39,7 +39,7 @@ About Us page is still navigable in the home page in the header bar. Once a user
 | Rhon              | machoRhon          |
 | Vhino             | machoButGanda      |
 | Justine           | silentButDeadly    |
-| RealJed           | notJedWig          |
+| RealJed           | NotJedWig          |
 | +_xXTalaXx_+      | tamaBaTo           |
 |-------------------|--------------------|
 
