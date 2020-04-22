@@ -287,32 +287,32 @@ $(function(){
     });
 
     $(document).on("click", "#viewReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(35, 50);
+        var href = $(this).attr('href') + window.location.href.substring(36, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#review", function(){
-        var href = $(this).attr('href') + window.location.href.substring(35, 50);
+        var href = $(this).attr('href') + window.location.href.substring(36, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#editReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(35, 50);
+        var href = $(this).attr('href') + window.location.href.substring(36, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#it_viewDownload", function(){
-        var href = $(this).attr('href') + window.location.href.substring(35);
+        var href = $(this).attr('href') + window.location.href.substring(36);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#viewEdit", function(){
-        var href = $(this).attr('href') + window.location.href.substring(35);
+        var href = $(this).attr('href') + window.location.href.substring(36);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#viewEditReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(38);
+        var href = $(this).attr('href') + window.location.href.substring(39);
         $(this).attr('href', href);
     });
 
