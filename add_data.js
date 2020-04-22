@@ -87,7 +87,7 @@ const data = {
 				lname: 'Tan',
 				email: 'jedtan@gmail.com',
 				username: 'RealJed',
-				hash: '4a9e74f1d4f637e43946dfba162d748245d068e9598c2d14d141162f2162eabe',
+				hash: '99eaf5f413524e5c2d3c39991ea83bf72d982faf2760fcd35b7c2e080ac355cc',
 				salt: 'jJA7iYxS8pPjEu7d2mCw6poTaSBUpAgrjOSJSZYWj/I5N3H3iu19bibc7QARQ16NAe4Av31hojmmysd3C/T3YQ==',
 				age: 19,
 				address: 'Caloocan',
