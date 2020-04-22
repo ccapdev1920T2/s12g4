@@ -287,27 +287,27 @@ $(function(){
     });
 
     $(document).on("click", "#viewReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(34, 49);
+        var href = $(this).attr('href') + window.location.href.substring(35, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#review", function(){
-        var href = $(this).attr('href') + window.location.href.substring(34, 49);
+        var href = $(this).attr('href') + window.location.href.substring(35, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#editReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(34, 49);
+        var href = $(this).attr('href') + window.location.href.substring(35, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#it_viewDownload", function(){
-        var href = $(this).attr('href') + window.location.href.substring(34);
+        var href = $(this).attr('href') + window.location.href.substring(35);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#viewEdit", function(){
-        var href = $(this).attr('href') + window.location.href.substring(34);
+        var href = $(this).attr('href') + window.location.href.substring(35);
         $(this).attr('href', href);
     });
 
