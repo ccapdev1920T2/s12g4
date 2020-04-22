@@ -19,7 +19,7 @@ The web application is an itinerary maker in which the user can search for activ
 
 1. Go to the link below to access the web application:
 ```
-http://s12gr4.herokuapp.com/
+http://s12g4.herokuapp.com/
 ```
 
 In this page, an 'About Us' page would be presented and by clicking on the 'Proceed to Home Page' button you can either login (as an existing user) or register (as a new user) to be able to navigate through the features.
