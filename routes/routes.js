@@ -107,9 +107,9 @@ app.post('/login', controller.postLogin);
 
 app.post('/registration', controller.postRegistration);
 
-app.post('/newmemory', upload.array('memimages', 5) ,controller.postMemCreate);
+app.post('/newmemory', upload.array('memimages', 10) ,controller.postMemCreate);
 
-app.post('/mem_edit',  upload.array('memimages', 5), controller.postMemEdit);
+app.post('/mem_edit',  upload.array('memimages', 10), controller.postMemEdit);
 
 app.post('/it_create', controller.postItCreate);
 
