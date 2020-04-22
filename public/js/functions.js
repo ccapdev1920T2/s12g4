@@ -312,7 +312,7 @@ $(function(){
     });
 
     $(document).on("click", "#viewEditReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(39);
+        var href = $(this).attr('href') + window.location.href.substring(37);
         $(this).attr('href', href);
     });
 
