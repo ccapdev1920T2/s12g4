@@ -189,7 +189,7 @@ $(function(){
     $('#deleteReview').click(function(){
         if(confirm("Are you sure you want to delete this review?"))
         {
-            var it_id = window.location.href.substring(46);
+            var it_id = window.location.href.substring(45);
             $.get('/deleteReview', {it_id : it_id});
         }
     });
@@ -287,32 +287,32 @@ $(function(){
     });
 
     $(document).on("click", "#viewReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(36, 51);
+        var href = $(this).attr('href') + window.location.href.substring(35, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#review", function(){
-        var href = $(this).attr('href') + window.location.href.substring(36, 51);
+        var href = $(this).attr('href') + window.location.href.substring(35, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#editReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(36, 51);
+        var href = $(this).attr('href') + window.location.href.substring(35, 50);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#it_viewDownload", function(){
-        var href = $(this).attr('href') + window.location.href.substring(36);
+        var href = $(this).attr('href') + window.location.href.substring(35);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#viewEdit", function(){
-        var href = $(this).attr('href') + window.location.href.substring(36);
+        var href = $(this).attr('href') + window.location.href.substring(35);
         $(this).attr('href', href);
     });
 
     $(document).on("click", "#viewEditReview", function(){
-        var href = $(this).attr('href') + window.location.href.substring(39);
+        var href = $(this).attr('href') + window.location.href.substring(38);
         $(this).attr('href', href);
     });
 
