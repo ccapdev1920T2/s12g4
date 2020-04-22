@@ -26,8 +26,6 @@ In this page, an 'About Us' page would be presented and by clicking on the 'Proc
 
 About Us page is still navigable in the home page in the header bar. Once a user logs in, it will no longer be naviagble in the navigation bar.
 
-7. If you want to rerun the application, you have to run the command `node delete_data.js` first and `ctrl + c` afterwards for termination before rerunning `node index.js` to avoid repetition of documents in the database.
-
 ## Navigating Features:
 
 1. Register (Optional) - by clicking the 'Register' button, you will be redirected to the registration page and you can register as a user by filling up the registration form and clicking the 'Register' button afterwards. This will then create a new user account that has the inputted details in the registration and you will be redirected to a screen saying 'You have successfully created your account'. Then, click on 'Back to Home Page' to proceed to the login.
