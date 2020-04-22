@@ -24,7 +24,7 @@ http://s12gr4.herokuapp.com/
 
 In this page, an 'About Us' page would be presented and by clicking on the 'Proceed to Home Page' button you can either login (as an existing user) or register (as a new user) to be able to navigate through the features.
 
-About Us page is still navigable in the home page in the header bar. Once a user logs in, it will no longer be naviagble in the navigation bar.
+About Us page is still navigable in the home page in the header bar. Once a user logs in, it will no longer be navigable in the navigation bar.
 
 ## Navigating Features:
 
